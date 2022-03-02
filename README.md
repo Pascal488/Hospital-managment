@@ -30,11 +30,4 @@ Add Employee Leave
 ![](screenshot/leave.PNG)
 
 
-https://console.clever-cloud.com/users/me/addons/addon_d6327e74-a5ff-4672-9c70-4e9dd7805f66
-login using this link
-and password for kidubo github
 
-
-token
-
-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

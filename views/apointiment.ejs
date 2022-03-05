@@ -4,22 +4,38 @@
     <form action="/appointiment" method="POST">
   
       <label for="fname">First Name</label>
-      <input type="text" id="fname" name="name" placeholder="Your name..">
+      <input type="text" id="fname" name="name" placeholder="Your name.." required>
       
-      <label for="fname">First Name</label>
-      <input type="text" id="" name="email" placeholder="Your email..">
-  
-     
-  
-      <label for="">Message</label>
-      <textarea id="" name="message" placeholder="Write something.." style="height:200px"></textarea>
+      <label for="secname">Second name</label>
+      <input type="text" id="" name="secnmae" placeholder="Your second name" required>
 
-      
-      
+      <label for="email">Email adress</label>
+      <input type="text" id="" name="email" placeholder="Your email.." required>
   
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+     <label for="select">Select a service</label>
+      <select class="form-control" id="Select">
+        <option value="1" selected>Select service</option>
+        <option value="2">Name of service</option>
+        <option value="3">Name of service</option>
+        <option value="4">Name of service</option>
+        <option value="5">Name of service</option>
+    </select>
+
+    <label for="Time">Pick a time</label>
+    <select class="form-control" id="Select2">
+      <option value="" selected>Time</option>
+      <option value="1">8 AM TO 10AM</option>
+      <option value="1">10 AM TO 12PM</option>
+      <option value="1">12PM TO 2PM</option>
+      <option value="1">2PM TO 4PM</option>
+      <option value="1">4PM TO 6PM</option>
+      <option value="1">6PM TO 8PM</option>
+      <option value="1">4PM TO 10PM</option>
+      <option value="1">10PM TO 12PM</option>
+  </select>
   
+      <label for="note">Your note</label>
+      <textarea id="" name="message" placeholder="Write your note here.." style="height:200px"></textarea> 
       <input type="submit" value="Submit" class="button" id="submit">
   
     </form>
@@ -61,10 +77,10 @@ input[type=submit]:hover {
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 30px;
+  max-width: 500px;
+  margin:0 auto;
+
 }
 h1{
   margin-top: 15px;

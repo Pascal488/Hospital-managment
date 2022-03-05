@@ -18,10 +18,10 @@ router.get('/', function(req ,res){
 
 var con = mysql.createConnection({
 
-    host : 'bqzoyszm9wnbkixnrybf-mysql.services.clever-cloud.com',
-    user : 'uf2yi9pybrk9bgh0',
-    password :'yi3RhwfwtBKtM5qCRHSr',
-    database : 'bqzoyszm9wnbkixnrybf',
+    host : 'bdytynyr2zehrkce731c-mysql.services.clever-cloud.com',
+    user : 'ufm30uxgnmkabt3x',
+    password :'rJdNt3vzdBqQy8k4wLKt',
+    database : 'bdytynyr2zehrkce731c'
 });
 
 router.use(session({

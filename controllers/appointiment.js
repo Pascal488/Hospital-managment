@@ -13,7 +13,7 @@ router.get('*', function(req, res, next){
 });
 
 router.get('/',function(req,res){
- 
+    
     res.render ('apointiment.ejs');
 });
 
@@ -25,7 +25,9 @@ router.post('/',function(req,res){
     var subject = req.body.subject;
 
     db.postappointiment(message,name,email,subject,function(err,result){
+        console.log(err);
         res.redirect('back');
+        //res.render('success',{data: req.body});
     });
 
 });

@@ -31,7 +31,7 @@ var store = require ('./controllers/store');
 var landing = require ('./controllers/landing');
 var complain = require ('./controllers/complain');
 var inbox = require ('./controllers/inbox');
-var appointment = require ('./controllers/appointment');
+//var appointment = require ('./controllers/appointment');
 var appointiment= require ('./controllers/appointiment');
 
 var receipt = require ('./controllers/receipt');

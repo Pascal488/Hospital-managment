@@ -92,7 +92,7 @@ module.exports.postcomplain = function(message,name,email,subject,callback){
     con.query(query,callback);
 }
 module.exports.postappointiment = function(message,name,email,subject,callback){
-    var query = "insert into appointiment (message,name,email,subject) values ('"+message+"','"+name+"','"+email+"','"+subject+"')";
+    var query = "INSERT INTO `appointiment` (`message`,`name`,`email`,`subject`) values ('"+message+"','"+name+"','"+email+"','"+subject+"')";
     console.log(query);
     con.query(query,callback);
 }

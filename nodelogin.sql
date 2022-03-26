@@ -28,24 +28,24 @@ SET time_zone = "+00:00";
 -- Table structure for table `appointment`
 --
 
-CREATE TABLE `appointment` (
-  `id` int(10) NOT NULL,
-  `patient_name` varchar(255) NOT NULL,
-  `department` varchar(255) NOT NULL,
-  `doctor_name` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL,
-  `time` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `phone` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- CREATE TABLE `appointment` (
+--   `id` int(10) NOT NULL,
+--   `patient_name` varchar(255) NOT NULL,
+--   `department` varchar(255) NOT NULL,
+--   `doctor_name` varchar(255) NOT NULL,
+--   `date` varchar(255) NOT NULL,
+--   `time` varchar(255) NOT NULL,
+--   `email` varchar(255) NOT NULL,
+--   `phone` varchar(20) NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `appointment`
 --
 
-INSERT INTO `appointment` (`id`, `patient_name`, `department`, `doctor_name`, `date`, `time`, `email`, `phone`) VALUES
-(6, 'Test', 'Orthopedics', 'B.rabbit', '26/03/2020', '10:43 AM', 'gmhs13@yopmail.com', '7865641399'),
-(10, 'Test123', 'Orthopedics', 'doc test', '18/03/2020', '1:41 AM', 'gmhs13@yopmail.com', '7865641399');
+-- INSERT INTO `appointment` (`id`, `patient_name`, `department`, `doctor_name`, `date`, `time`, `email`, `phone`) VALUES
+-- (6, 'Test', 'Orthopedics', 'B.rabbit', '26/03/2020', '10:43 AM', 'gmhs13@yopmail.com', '7865641399'),
+-- (10, 'Test123', 'Orthopedics', 'doc test', '18/03/2020', '1:41 AM', 'gmhs13@yopmail.com', '7865641399');
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,7 @@ CREATE TABLE `appointiment` (
 
 -----------------------------------------------
 
---Adding some sample data in the table
+--Adding some sample data in the table-------
 
 INSERT INTO `appointiment` (`id`, `message`, `name`, `email`, `subject`) VALUES
 (1, 'Test', 'test', 'test', 'test'),

@@ -5,10 +5,13 @@ var bodyPaser = require ('body-parser');
 
 
 router.get('*', function(req, res, next){
-	if(req.cookies['username'] == null){
+    
+	if(req.cookies['username'] === null){
 		res.redirect('/login');
+        
 	}else{
 		next();
+        
 	}
 });
 
@@ -18,16 +21,22 @@ router.get('*', function(req, res, next){
 
 
 router.get('/',function(req,res){
+    var total_doc = 0;
+    var appointment = 0;
+    var result = []
+    var result1 = []
     db.getAllDoc(function(err,result){
         db.getallappointment(function(err,result1){
-        var total_doc = result.length ;
-        var appointment = result1.length;
-         
-        res.render('home.ejs',{doc : total_doc , doclist : result, appointment : appointment, applist : result1});
+        total_doc = result.length ;
+        appointment = result1.length;
+        result = result
+        result1 = result1
         });
         //console.log(result.length);
         
     });
+
+    res.render('home.ejs',{doc : total_doc , doclist : result, appointment : appointment, applist : result1});
    
 });
 

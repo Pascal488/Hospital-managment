@@ -52,33 +52,40 @@ router.post('/',[
 
     if (username && password){
         con.query('select * from users where username = ? and password = ?' , [username, password], function(error , results , fields){
+        console.log(results);
+
             if (results.length > 0){
-                
-                 request.session.loggedin = true ; 
+                 request.session.loggedin = true; 
                  request.session.username = username;
                  response.cookie('username' , username);
                  var status = results[0].email_status;
-                 //response.redirect('/home');
+                
 
                  if (status=="not_verified" ){
-                     response.send("please verify your email");
+                  
+                    response.send("please verify your email");
+                    response.redirect('/home');
+
                  }
-            }
+            
                 else{
-                    sweetalert.fire('logged In!');
+                    //sweetalert.fire('logged In!');
+                    console.log(status);
                     response.redirect('/home');
                 }
-            
-        response.end();
-        response.redirect('/home');
-
+              
+            }
+        // response.end();
+        // response.redirect('/home');
+        else{
+            response.send('please enter user name and password');
+            response.end();
+            response.redirect('/home');
+    
+        }
         });
 
-    }else{
-        response.send('please enter user name and password');
-        response.end();
     }
-
 });
 
 module.exports = router;
